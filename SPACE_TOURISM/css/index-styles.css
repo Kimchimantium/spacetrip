@@ -1,0 +1,355 @@
+body {
+    margin: 0;
+    font-family: 'Space Grotesk','Source Code Pro', Arial;
+    font-size: 8px;
+    font-weight: 300;
+    background-color: #14161d;
+}
+h1{
+    font-family: "Source code pro";
+    position: relative; 
+    font-weight: 600;
+    font-size: 10vw;
+    color: beige;
+    z-index: 2;
+    margin: 1vw 2vw 0;
+}
+h2 {
+    margin: 0 1vw 0;
+    position: relative; 
+    font-weight: 300;
+    opacity: 77%;
+    font-size: 2vw;
+    color: beige;
+    z-index: 2;
+}
+.bg-img {
+    width: 100vw;
+    min-height: 150vh;
+    position: absolute;
+    margin-top: 0;
+    z-index: -2;
+    /* top: 0; */
+}
+
+hr {
+    position: absolute;
+    width: 38vw;
+    left: 4vw;
+    height:0.5vw;
+    background-color: antiquewhite;
+    border: none;
+    margin-top: 7.5vw;
+    opacity: 13%;
+    z-index: -1;
+}
+.blur-box {
+    position: absolute;
+    margin-top: 6.5vw;
+    right: 0;
+    width: 60vw;
+    height: 8vw;
+    background-color: rgba(133, 133, 133, 0.4);
+    border:  none;
+    backdrop-filter: blur(0.5px);
+    z-index: 1;
+}
+.img-logo {
+    position: absolute;
+    width: 4vw;
+    height: 4vw;
+    left: 0.5vw;
+    top: 8.7vw;
+}
+a {
+    text-decoration: none;
+    color:antiquewhite;
+}
+
+.bold {
+    font-weight: 600;
+}
+.menu-box {
+    position: relative;
+    margin: 10vw 4vw 0 0;
+    left: 45vw;
+    display: inline-block;
+    color: beige;
+    z-index: 2;
+}
+.has-dropdown {
+    display: inline-block;
+    position: relative;
+    left: 42vw;
+    z-index: 2;
+    top: 9vw;
+}
+.dropdown {
+    display: none;
+}
+.has-dropdown:hover .dropdown {
+    display: block;
+    position: absolute;
+    background-color: rgba(133, 133, 133, 0.4);
+    z-index: 2;
+}
+.has-dropdown:hover .dropdown a {
+    color:antiquewhite;
+    text-decoration: none;
+    display: block;
+    line-height: 3vw;
+    margin: 1vw;
+    font-size: 2vw;
+}
+.main-text h2 {
+    top: 23vw;
+    left: 1.2vw;
+    letter-spacing: 0.2vw;
+    line-height: 3vw;
+}
+.main-text h1 {
+    top: 20vw;
+}
+.main-text .crew {
+    margin-left: 10vw;
+}
+.planet {
+    width: 40vw;
+    display: relative;
+    margin: 30vw 0 0 5vw;
+    animation: orbiting 15s ease-in-out infinite;
+}
+.planet2 {
+    width: 40vw;
+    display: relative;
+    margin: 30vw 0 0 5vw;
+    animation: anti-orbiting 15s  infinite;
+}
+@keyframes orbiting {
+    0%, 100%{
+        transform: scale(0.8) translateX(0) translateY(0); /* Initial position */
+        opacity: 100%;
+        
+      }
+
+      50% {
+            transform: scale(0.3) translateX(100vw) translateY(-15vw);
+            opacity: 20%;
+      }
+    
+}
+@keyframes anti-orbiting {
+    0%, 100%{
+        transform: scale(0.3) translateX(60vw) translateY(-15vw);
+            opacity: 20%;
+      }
+
+      50% {
+            transform: scale(0.8) translateX(0) translateY(0); /* Initial position */
+        opacity: 80%;
+      }
+    
+}
+.planet-explanation {
+    position: absolute;
+    display: inline-block;
+    margin: 30vw 0 0 -37vw;
+    width: 33vw;
+}
+.planet-explanation h2 {
+    font-size: 1.4vw;
+    margin-left: 2.5vw;
+    line-height: 2.5vw;
+}
+.left-top-text {
+    position: relative;
+    display: inline-block;
+    top: 18vw;
+    right: 39vw;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-3vw);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
+/* Style the text before the typing effect */
+  
+.has-dropdown::before {
+ content: "";
+ position: absolute;
+ margin-top: 5.5vw;
+ margin-left: 2vw;
+ width:80%;
+ height: 0.1vw;
+ 
+ background-color: rgba(255, 255, 255, 0.8);
+ transform: scaleX(0);
+ transform-origin: left;
+ transition: transform 0.2s ease-in-out;
+}
+  
+  .has-dropdown:hover::before {
+    transform: scaleX(1);
+}
+.hr2 {
+    position:relative; 
+    left: 56vw;
+    bottom: 10vw; 
+    width: 28vw; 
+    height:0.2vw;
+    z-index: 2;
+    background-color: aliceblue;
+}
+.stat-text-title h2{
+    font-size: 1.75vw;
+    position: relative;
+    display: inline-block;
+    bottom: 8vw;
+    left: 55vw;
+    margin-right: 1vw; 
+}
+.stat-text-content h2{
+    display: inline-block;
+    position: relative;
+    font-family: "source code pro";
+    font-size: 1.5vw;
+    margin-left: 3vw;
+    left: 53vw;
+    bottom: 8vw;
+}
+.img-crew {
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    width: 40vw;
+    bottom: 10vw;
+    z-index: 1;
+    animation: show-up 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+}
+@keyframes show-up {
+    0% {
+        opacity: 0%;
+        transform: translateY(50vw)
+    }
+    100% {
+        opacity: 100%;
+        transform: translateY(0)
+    }
+}
+.main-text .tech {
+    margin-left: 20vw;
+}
+
+.img-tech {
+    position: absolute;
+    width: 40vw;
+    right: 0;
+    top: 23vw;
+    z-index: 1;
+    animation: show-up 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+.circle-filled {
+    position: relative;
+    width: 8vw;
+    height: 8vw;
+    z-index: 2;
+    background-color: aliceblue;
+    border-radius: 50%;
+    margin-bottom: 6vw;
+    left: 10vw;
+    bottom: 14vw;
+}
+.circle-filled h1 {
+    color:#14161d;
+    position: absolute;
+    z-index: 2;
+    top: 45%; /* Adjust the vertical position */
+    left: 52%; /* Adjust the horizontal position */
+    transform: translate(-93%, -60%); /* Center the <h1> within its parent */
+    font-size: 4.2vw;
+    font-weight: 300;
+    /* left: 2vw; */
+}
+.circle-unfilled {
+    position: relative;
+    width: 7.8vw; 
+    height: 7.8vw; 
+    z-index: 2;
+    border: 0.1vw solid aliceblue; 
+    border-radius: 50%;
+    margin-bottom: 6vw;
+    left: 10vw; 
+    bottom:14vw
+}
+.circle-unfilled h1 {
+    color:aliceblue;
+    position: absolute;
+    z-index: 2;
+    top: 45%; /* Adjust the vertical position */
+    left: 52%; /* Adjust the horizontal position */
+    transform: translate(-93%, -60%); /* Center the <h1> within its parent */
+    font-size: 4.2vw;
+    font-weight: 300;
+} 
+.circle-filled-index {
+    position: absolute;
+    width: 25vw;
+    height: 25vw;
+    z-index: 2;
+    background-color: aliceblue;
+    border-radius: 50%;
+    margin-bottom: 6vw;
+    right: 20vw;
+    top: 40vw;
+}
+.circle-filled-index:hover {
+    background-color:#14161d;
+}
+.circle-filled-index:hover a {
+    color: aliceblue;
+}
+.circle-filled-index a {
+    color:#14161d;
+    position: absolute;
+    z-index: 2;
+    top: 50%; /* Adjust the vertical position */
+    left: 50%; /* Adjust the horizontal position */
+    transform: translate(-50%, -50%); /* Center the <h1> within its parent */
+    font-size: 4.2vw;
+    font-weight: 300;
+}
+.circle-indicator-container {
+    position: relative;
+    width: 15vw;
+    height: 1vw;
+    bottom: 25vw;
+    left: 12vw;
+}
+.circle-circle-crew {
+    display: inline-block;
+    border-radius: 50%;
+    width: 1vw;
+    height: 1vw;
+    margin-right: 1vw; /* Adjust the spacing between circles */
+    border: 0.1vw solid aliceblue;
+}
+.circle-circle-crew.filled {
+    background-color: aliceblue;
+    border: none;
+}
+.circle-circle-crew a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    text-decoration: none;
+  }
+  

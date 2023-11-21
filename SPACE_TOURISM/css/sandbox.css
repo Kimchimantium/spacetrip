@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+}
+.parent {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: rebeccapurple;
+}
+
+.child {
+  position: absolute;
+  display: inline-block;
+  /* top: 20px;
+  left: 20px; */
+  width: 20px;
+  height: 20px;
+  background-color: aqua;
+}
